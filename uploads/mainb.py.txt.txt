@@ -1,0 +1,23 @@
+from tkinter import *
+root = Tk()
+
+
+e1 = Entry(width=40)
+e1.pack()
+
+x = ""
+def deleteText():
+    e1.delete(0, END)
+def hideText():
+    e1.pack_forget()
+def showText():
+    e1.pack()
+
+
+b = Button(text="hideText", command=hideText)
+b.pack()
+b1 = Button(text="showText", command=showText)
+b1.pack()
+
+
+root.mainloop()
